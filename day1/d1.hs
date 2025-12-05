@@ -1,4 +1,5 @@
 import Control.Monad.Trans.State
+import System.Environment (getArgs)
 
 data Direction = L | R deriving Show
 
@@ -11,7 +12,8 @@ data ProgramState = ProgramState { zeroCount :: Int
 
 main :: IO ()
 main = do
-  turns <- map stringToTurn . lines <$> readFile "input.txt"
+  fileName <- (!!0) <$> getArgs
+  turns <- map stringToTurn . lines <$> readFile fileName
   -- calculate the hits and passes using the power of **MONADIC ACTIONS**
   let zeroHits = zeroCount $ execState (mapM countPointsToZero turns) initialState
   let zeroPasses = zeroCount $ execState (mapM countPassesOverZero turns) initialState
