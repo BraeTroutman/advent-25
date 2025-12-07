@@ -17,7 +17,7 @@ main = do
   -- calculate the hits and passes using the power of **MONADIC ACTIONS**
   let zeroHits = zeroCount $ execState (mapM countPointsToZero turns) initialState
   let zeroPasses = zeroCount $ execState (mapM countPassesOverZero turns) initialState
-  putStrLn $ "We hit zero: " ++ show zeroHits ++ " times, and pass it: " ++ show zeroPasses ++ " times."
+  print (zeroHits, zeroPasses)
 
 initialState :: ProgramState
 initialState = ProgramState 0 50

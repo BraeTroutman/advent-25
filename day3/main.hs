@@ -9,7 +9,7 @@ main = do
   lines <- lines <$> readFile fileName
   let sol1 = sum . map score $ lines
   let sol2 = sum . map score' $ lines
-  putStrLn $ "Solution 1: " ++ show sol1 ++ " . Solution 2: " ++ show sol2
+  print (sol1, sol2)
 
 -- naively generate the possible combinations of batteries in a bank
 combinations :: [a] -> [(a,a)]

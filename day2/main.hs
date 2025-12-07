@@ -6,7 +6,7 @@ main = do
   idList <- concatMap stringToRange . lines <$> readFile fileName
   let invalidCount1 = sum . filter isTwoRepeatedDigits $ idList
   let invalidCount2 = sum . filter hasRepeatedNumbers $ idList
-  putStrLn $ show invalidCount1 ++ " IDs satisfy first condition, and " ++ show invalidCount2 ++ " satisfy the second."
+  print (invalidCount1, invalidCount2)
 
 -- utility function for a few locations. We can use it to determine if a number can even have repeats
 -- (number of digits must be even for that). It can also help us break up the number into two part for

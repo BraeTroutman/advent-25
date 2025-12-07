@@ -1,4 +1,4 @@
-all: day1 day2 day3
+all: day1 day2 day3 day4
 
 day1: d1
 	./day1/d1 day1/input.txt
