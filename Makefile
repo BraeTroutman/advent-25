@@ -17,3 +17,9 @@ day3: d3
 
 d3:
 	ghc -o day3/d3 day3/main
+
+day4: d4
+	./day4/d4 day4/input.txt
+
+d4:
+	ghc -o day4/d4 day4/main.hs
