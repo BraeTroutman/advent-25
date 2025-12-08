@@ -1,4 +1,4 @@
-all: day1 day2 day3 day4 day5
+all: day1 day2 day3 day4 day5 day6
 
 day1: d1
 	./day1/d1 day1/input.txt
@@ -29,3 +29,9 @@ day5: d5
 
 d5:
 	ghc -o day5/d5 day5/main.hs
+
+day6: d6
+	./day6/d6 day6/input.txt
+
+d6:
+	ghc -o day6/d6 day6/main.hs
