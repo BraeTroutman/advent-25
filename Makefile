@@ -47,3 +47,9 @@ day8: d8
 
 d8:
 	ghc -o day8/d8 day8/main.hs
+
+day9: d9
+	./day9/d9 day9/input.txt
+
+d9:
+	ghc -o day9/d9 day9/main.hs
